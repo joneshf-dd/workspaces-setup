@@ -12,6 +12,7 @@ if ! command -v nix &> /dev/null; then
     # We don't have enough permissions to run multi-user,
     # so we use `--no-daemon`.
     sh <(curl --location --proto '=https' --tlsv1.2 https://nixos.org/nix/install) --no-daemon --yes
+    source ~/.nix-profile/etc/profile.d/nix.fish
     echo "Nix installed successfully."
 else
     echo "Nix is already installed."
