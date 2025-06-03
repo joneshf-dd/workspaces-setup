@@ -9,7 +9,6 @@ IFS=$'\n\t'
 # Install `nix`
 if command -v nix &> /dev/null; then
     echo "Nix is already installed."
-    exit
 else
     echo "Nix is not installed. Installing..."
 
@@ -27,7 +26,6 @@ fi
 # Write the script to initialize `home-manager` to the PATH.
 if command -v initialize-home-manager &> /dev/null; then
     echo "initialize-home-manager is already in PATH."
-    exit
 else
     echo "initialize-home-manager is not in PATH. Creating script..."
 
