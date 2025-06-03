@@ -39,6 +39,9 @@ set -o pipefail
 
 IFS=$'\n\t'
 
+# Remove any previous \`home-manager\` repository
+rm -rf ~/.config/home-manager
+
 # Clone my \`home-manager\` repository
 git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 
