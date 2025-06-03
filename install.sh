@@ -29,6 +29,8 @@ if command -v initialize-home-manager &> /dev/null; then
     echo "initialize-home-manager is already in PATH."
     exit
 else
+    echo "initialize-home-manager is not in PATH. Creating script..."
+
     mkdir --parents ~/.local/bin
     cat <<EOF > ~/.local/bin/initialize-home-manager
 #!/usr/bin/env bash
@@ -48,4 +50,6 @@ git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 nix run home-manager/release-25.05 --no-write-lock-file -- switch
 EOF
     chmod 0755 ~/.local/bin/initialize-home-manager
+
+    echo "initialize-home-manager script created successfully."
 fi
