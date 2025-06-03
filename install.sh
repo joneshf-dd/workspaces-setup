@@ -43,4 +43,4 @@ git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 # but we can't \`nix run\` anything without it.
 nix run home-manager/release-25.05 --no-write-lock-file -- switch
 EOF
-chmod 0755 initialize-home-manager
+chmod 0755 ~/.local/bin/initialize-home-manager
