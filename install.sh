@@ -45,6 +45,9 @@ rm -rf ~/.config/home-manager
 # Clone my \`home-manager\` repository
 git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 
+# Set the priority of the global \`nix\` lower than what we're about to install.
+nix-env --set-flag priority 0 "$(nix-env --query nix)"
+
 # Install \`home-manager\`
 nix run nixpkgs#nh -- home switch ~/.config/home-manager
 EOF
