@@ -18,9 +18,6 @@ echo "Nix is not installed. Installing..."
 # so we use `--no-daemon`.
 sh <(curl --location --proto '=https' --tlsv1.2 https://nixos.org/nix/install) --no-daemon --yes
 
-# Add Nix to the PATH
-source ~/.nix-profile/etc/profile.d/nix.fish
-
 # Enable flakes
 mkdir --parents ~/.config/nix
 echo 'experimental-features = flakes nix-command' > ~/.config/nix/nix.conf
