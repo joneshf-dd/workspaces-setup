@@ -46,9 +46,7 @@ rm -rf ~/.config/home-manager
 git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 
 # Install \`home-manager\`
-# No clue why we need \`--no-write-lock-file\`,
-# but we can't \`nix run\` anything without it.
-nix run home-manager/release-25.05 --no-write-lock-file -- switch
+nix run nixpkgs#nh -- home switch ~/.config/home-manager
 EOF
     chmod 0755 ~/.local/bin/initialize-home-manager
 
