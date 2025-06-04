@@ -49,7 +49,7 @@ git clone git@github.com:joneshf-dd/home-manager.git ~/.config/home-manager
 nix-env --set-flag priority 0 "\$(nix-env --query nix)"
 
 # Install \`home-manager\`
-nix run nixpkgs#nh -- home switch ~/.config/home-manager
+nix run nixpkgs#nh -- home switch ~/.config/home-manager --backup-extension=backup
 EOF
     chmod 0755 ~/.local/bin/initialize-home-manager
 
